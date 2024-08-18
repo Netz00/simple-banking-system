@@ -100,3 +100,10 @@ VALUES
 (customer_sequence.nextval, 'Tina White', '9595 Oak St', 'tina.white@example.com', '(313) 555-0197'),
 (customer_sequence.nextval, 'Ursula Scott', '9696 Pine St', 'ursula.scott@example.com', '(313) 555-0198'),
 (customer_sequence.nextval, 'Victor Brown', '9797 Maple St', 'victor.brown@example.com', '(313) 555-0199');
+
+
+INSERT INTO account
+(id, number, type, balance, past_month_turnover, accounts_id)
+VALUES
+(account_sequence.nextval, 0321341, 'CHECKING', 1000, 0, 1),
+(account_sequence.nextval, 0321342, 'SAVINGS', 1000, 0, 1);

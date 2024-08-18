@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import org.netz00.simple_banking_system.model.Account;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 public class CustomerDTO {
@@ -25,5 +29,8 @@ public class CustomerDTO {
     @NotBlank(message = "phoneNumber must not be empty")
     @JsonProperty("phone_number")
     private String phoneNumber;
+
+    @JsonProperty("accounts")
+    private Set<Account> accounts = new HashSet<>();
 
 }

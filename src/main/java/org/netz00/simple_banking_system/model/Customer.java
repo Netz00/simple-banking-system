@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -47,5 +50,10 @@ public class Customer {
     @NotEmpty(message = "Phone number is required. Phone number cannot be null or empty")
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
+
+    // Unidirectional
+    @JoinColumn // without JOIN table
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Account> accounts = new HashSet<>();
 
 }

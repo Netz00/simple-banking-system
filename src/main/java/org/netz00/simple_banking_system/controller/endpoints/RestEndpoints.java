@@ -1,5 +1,9 @@
 package org.netz00.simple_banking_system.controller.endpoints;
 
 public class RestEndpoints {
-    public static final String API_CUSTOMER = "v1/api/customer";
+
+    // TODO: recommend to client using following endpoints instead: v1/api/customers/{id}, v1/api/transactions
+    public static final String API_CUSTOMER = "customer";
+    public static final String API_TRANSACTION = "transaction";
+
 }

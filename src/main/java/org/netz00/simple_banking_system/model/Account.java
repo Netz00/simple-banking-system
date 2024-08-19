@@ -6,6 +6,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.netz00.simple_banking_system.model.enums.AccountType;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,5 +37,18 @@ public class Account {
 
     @Column(name = "past_month_turnover")
     private Double pastMonthTurnover;
+
+    // Bidirectional
+    @JoinColumn // without JOIN table
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ToString.Exclude
+    private Set<Transaction> sent = new HashSet<>();
+
+    // Bidirectional
+    @JoinColumn // without JOIN table
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ToString.Exclude
+    private Set<Transaction> received = new HashSet<>();
+
 
 }

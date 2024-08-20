@@ -36,12 +36,14 @@ public class Transaction {
     @Column(name = "date_created", nullable = false)
     private Date dateCreated = new Date();
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "sender_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "sender_id", referencedColumnName = "id")
+    @ToString.Exclude
     Account sender;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "receiver_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "receiver_id", referencedColumnName = "id")
+    @ToString.Exclude
     Account receiver;
 
 }

@@ -31,6 +31,6 @@ public class CustomerDTO {
     private String phoneNumber;
 
     @JsonProperty("accounts")
-    private Set<Account> accounts = new HashSet<>();
+    private Set<AccountDTO> accounts = new HashSet<>();
 
 }

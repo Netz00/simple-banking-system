@@ -38,17 +38,8 @@ public class Account {
     @Column(name = "past_month_turnover")
     private Double pastMonthTurnover;
 
-    // Bidirectional
-    //    @JoinColumn // without JOIN table
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "sender")
+    @ManyToOne(fetch = FetchType.LAZY)
     @ToString.Exclude
-    private Set<Transaction> sent = new HashSet<>();
-
-    // Bidirectional
-    //    @JoinColumn // without JOIN table
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "receiver")
-    @ToString.Exclude
-    private Set<Transaction> received = new HashSet<>();
-
+    private Customer customer;
 
 }

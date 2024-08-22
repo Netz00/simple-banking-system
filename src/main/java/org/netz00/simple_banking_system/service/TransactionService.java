@@ -28,6 +28,7 @@ public class TransactionService {
         this.accountRepository = accountRepository;
     }
 
+    @Transactional()
     public TransactionPostResponseDTO save(TransactionRequestDTO transactionRequestDTO) {
 
         // TODO: User authorized?

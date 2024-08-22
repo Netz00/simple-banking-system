@@ -12,6 +12,8 @@ import org.netz00.simple_banking_system.repository.TransactionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Objects;
+
 @Service
 @Transactional
 public class TransactionService {
@@ -32,6 +34,10 @@ public class TransactionService {
     public TransactionPostResponseDTO save(TransactionRequestDTO transactionRequestDTO) {
 
         // TODO: User authorized?
+
+        // Validate transaction
+        if (Objects.equals(transactionRequestDTO.getSenderId(), transactionRequestDTO.getReceiverId()))
+            throw new ResourceNotFoundException("Sender and receiver cannot be the same account.");    // TODO: define a decent exception
 
         // Accounts exist?
         // TODO: Find sender and receiver in the single query

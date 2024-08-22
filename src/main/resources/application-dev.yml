@@ -14,3 +14,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        jdbc:
+          batch_size: 100
+        order_inserts: true
+        jdbc.batch_versioned_data: true
+
+cron-expression:
+  # Cron scheduler task for mass indexing Elasticsearch - every midnight 1st of the month
+  past-month-turnover-updater: "0 0 0 1 * *"

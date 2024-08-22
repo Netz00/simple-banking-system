@@ -36,14 +36,14 @@ public class Transaction {
     @Column(name = "date_created", nullable = false)
     private Date dateCreated = new Date();
 
+    // Unidirectional
     @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "sender_id", referencedColumnName = "id")
     @ToString.Exclude
-    Account sender;
+    private Account sender;
 
+    // Unidirectional
     @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "receiver_id", referencedColumnName = "id")
     @ToString.Exclude
-    Account receiver;
+    private Account receiver;
 
 }

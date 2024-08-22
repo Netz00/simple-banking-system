@@ -21,7 +21,6 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final CustomerMapper customerMapper;
     private final TransactionGetResponseMapper transactionGetResponseMapper;
-
     private final TransactionRepository transactionRepository;
 
     public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper, TransactionRepository transactionRepository, TransactionGetResponseMapper transactionGetResponseMapper) {
@@ -39,6 +38,11 @@ public class CustomerService {
         ));
     }
 
+
+    /**
+     * This approach was preferred over reaching the transactions through Account entity, because account data is not asked.
+     * Also, unnecessary JOIN would decrease performance.
+     */
     @Transactional(readOnly = true)
     public List<TransactionGetResponseDTO> searchTransactions(
             Long id,
@@ -49,7 +53,6 @@ public class CustomerService {
             Date dateBefore,
             TransactionFilter type
     ) {
-
 
         return transactionGetResponseMapper.toDto(
                 switch (type) {

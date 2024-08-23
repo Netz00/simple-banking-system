@@ -1,14 +1,14 @@
 package org.netz00.simple_banking_system.util.csv.entity;
 
 import com.opencsv.bean.CsvBindByName;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.netz00.simple_banking_system.model.enums.AccountType;
 
 @Builder
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountCSV {
 
     @CsvBindByName

@@ -38,8 +38,4 @@ public class Account {
     @Column(name = "past_month_turnover")
     private Double pastMonthTurnover;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @ToString.Exclude
-    private Customer customer;
-
 }

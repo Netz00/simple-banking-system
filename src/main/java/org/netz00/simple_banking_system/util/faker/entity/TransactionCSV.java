@@ -1,4 +1,4 @@
-package org.netz00.simple_banking_system.util.csv.entity;
+package org.netz00.simple_banking_system.util.faker.entity;
 
 
 import com.opencsv.bean.CsvBindByName;

@@ -1,9 +1,7 @@
-package org.netz00.simple_banking_system.util.csv;
+package org.netz00.simple_banking_system.util.faker;
 
 import com.opencsv.bean.CsvToBeanBuilder;
-import reactor.core.publisher.Flux;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;

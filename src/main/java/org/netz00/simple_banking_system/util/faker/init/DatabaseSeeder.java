@@ -1,20 +1,18 @@
-package org.netz00.simple_banking_system.util.csv.init;
+package org.netz00.simple_banking_system.util.faker.init;
 
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
 import org.netz00.simple_banking_system.model.Account;
 import org.netz00.simple_banking_system.model.Customer;
 import org.netz00.simple_banking_system.model.Transaction;
 import org.netz00.simple_banking_system.repository.AccountRepository;
 import org.netz00.simple_banking_system.repository.CustomerRepository;
 import org.netz00.simple_banking_system.repository.TransactionRepository;
-import org.netz00.simple_banking_system.util.csv.CsvParser;
-import org.netz00.simple_banking_system.util.csv.entity.AccountCSV;
-import org.netz00.simple_banking_system.util.csv.entity.CustomerCSV;
-import org.netz00.simple_banking_system.util.csv.entity.TransactionCSV;
-import org.netz00.simple_banking_system.util.csv.mapper.AccountCSVMapper;
-import org.netz00.simple_banking_system.util.csv.mapper.CustomerCSVMapper;
-import org.netz00.simple_banking_system.util.csv.mapper.TransactionCSVMapper;
+import org.netz00.simple_banking_system.util.faker.CsvParser;
+import org.netz00.simple_banking_system.util.faker.entity.AccountCSV;
+import org.netz00.simple_banking_system.util.faker.entity.CustomerCSV;
+import org.netz00.simple_banking_system.util.faker.entity.TransactionCSV;
+import org.netz00.simple_banking_system.util.faker.mapper.AccountCSVMapper;
+import org.netz00.simple_banking_system.util.faker.mapper.CustomerCSVMapper;
+import org.netz00.simple_banking_system.util.faker.mapper.TransactionCSVMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

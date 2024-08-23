@@ -1,4 +1,4 @@
-package org.netz00.simple_banking_system.util.csv;
+package org.netz00.simple_banking_system.util.faker;
 
 import com.github.javafaker.Faker;
 import com.opencsv.bean.StatefulBeanToCsv;
@@ -6,9 +6,9 @@ import com.opencsv.bean.StatefulBeanToCsvBuilder;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import org.netz00.simple_banking_system.model.enums.AccountType;
-import org.netz00.simple_banking_system.util.csv.entity.AccountCSV;
-import org.netz00.simple_banking_system.util.csv.entity.CustomerCSV;
-import org.netz00.simple_banking_system.util.csv.entity.TransactionCSV;
+import org.netz00.simple_banking_system.util.faker.entity.AccountCSV;
+import org.netz00.simple_banking_system.util.faker.entity.CustomerCSV;
+import org.netz00.simple_banking_system.util.faker.entity.TransactionCSV;
 
 import java.io.FileWriter;
 

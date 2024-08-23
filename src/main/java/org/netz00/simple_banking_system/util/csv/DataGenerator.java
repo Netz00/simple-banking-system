@@ -88,7 +88,9 @@ public class DataGenerator {
                     .type(AccountType.values()[random.nextInt(AccountType.values().length)]) // Random account type
                     .balance(Math.round((500.0 + random.nextDouble() * 10000) * 100.0) / 100.0) // Random balance between 500 and 10000
                     .pastMonthTurnover(0d) // Random turnover
-                    .customerId((long) Math.clamp((int) Math.round(scaledGaussian), 0, customersListSize - 1)).build());
+                    .customerId(1 + (long) Math.clamp((int) Math.round(scaledGaussian), 0, customersListSize - 1)) // TODO: hotfix only, +1 to avoid starting from 0
+                    .build()
+            );
         }
 
         return accounts;

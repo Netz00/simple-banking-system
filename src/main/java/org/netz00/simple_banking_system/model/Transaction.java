@@ -31,7 +31,7 @@ public class Transaction {
     @Column(name = "message", nullable = false)
     private String message;
 
-    @Setter(AccessLevel.NONE)
+    // @Setter(AccessLevel.NONE) Setter is required for the database init (Using database objects)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
     @Column(name = "date_created", nullable = false)
     private Date dateCreated = new Date();

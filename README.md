@@ -1,3 +1,17 @@
+![Spring Boot Badge](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=fff&style=for-the-badge)
+![Hibernate Badge](https://img.shields.io/badge/Hibernate-59666C?logo=hibernate&logoColor=fff&style=for-the-badge)
+![Bruno Badge](https://img.shields.io/badge/Bruno-F4AA41?logo=bruno&logoColor=fff&style=for-the-badge)
+
+# Solution
+
+## ERD
+![ERD](./documentation/ERD.svg)
+
+## Notes
+- Bruno collections are inside `src/test/resources/bruno/simple-banking-system`
+- dev is default profile
+
+
 # Exercise
 ​
     Design a simplified banking system that manages customer accounts, transactions, and notifications towards users.

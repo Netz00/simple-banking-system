@@ -20,5 +20,5 @@ spring:
         jdbc.batch_versioned_data: true
 
 cron-expression:
-  # Cron scheduler task for mass indexing Elasticsearch - every midnight 1st of the month
+  # Cron scheduler task configuration - every midnight 1st of the month
   past-month-turnover-updater: "0 0 0 1 * *"
